@@ -1,5 +1,18 @@
+// breakpoints
+@mixin tablet {
+  @media (min-width: $tablet) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: $laptop) {
+    @content;
+  }
+}
+
 @mixin desktop {
-  @media (min-width: 1024px) {
+  @media (min-width: $desktop) {
     @content;
   }
 }

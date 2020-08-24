@@ -72,6 +72,7 @@ export default {
    */
   styleResources: {
     scss: [
+      '@/assets/scss/01-base/_variables.scss',
       '@/assets/scss/01-base/_functions.scss',
       '@/assets/scss/01-base/_mixins.scss',
     ],
