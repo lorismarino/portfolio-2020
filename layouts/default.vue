@@ -7,6 +7,14 @@
 <style lang="scss">
 body {
   font-family: 'Poppins', sans-serif;
+  line-height: 1.5;
+  color: var(--white);
+  background-color: var(--black);
+
+  ::selection {
+    color: var(--white);
+    background-color: var(--primary);
+  }
 }
 
 html,
