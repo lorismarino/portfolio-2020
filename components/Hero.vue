@@ -1,5 +1,5 @@
 <template>
-  <section class="hero">
+  <section class="hero" @mousemove="onMove">
     <container fill>
       <grid fill align-content-laptop="center">
         <Column :laptop="4">
@@ -16,7 +16,14 @@
               I like <strong>integration</strong> and
               <strong>VueJs/NuxtJs</strong>
             </p>
-            <svg class="hero__textTriangle" viewBox="0 0 308 298" fill="none">
+            <svg
+              :style="{
+                transform: `translateX(${transform.x}px) translateY(${transform.y}px)`,
+              }"
+              class="hero__textTriangle"
+              viewBox="0 0 308 298"
+              fill="none"
+            >
               <path
                 d="M1.53056 172.57L207.757 64.2129L198.484 296.989L1.53056 172.57Z"
               />
@@ -30,6 +37,43 @@
     </container>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      lastPosition: {
+        x: 0,
+        y: 0,
+      },
+      transform: {
+        x: 0,
+        y: 0,
+      },
+    }
+  },
+
+  methods: {
+    onMove(event) {
+      if (event.clientX > this.lastPosition.x + 40) {
+        this.lastPosition.x = event.clientX
+        this.transform.x -= 1
+      } else if (event.clientX < this.lastPosition.x - 40) {
+        this.lastPosition.x = event.clientX
+        this.transform.x += 1
+      }
+
+      if (event.clientY > this.lastPosition.y + 40) {
+        this.lastPosition.y = event.clientY
+        this.transform.y -= 1
+      } else if (event.clientY < this.lastPosition.y - 40) {
+        this.lastPosition.y = event.clientY
+        this.transform.y += 1
+      }
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .hero {
@@ -48,6 +92,7 @@
       height: rem(300);
       stroke: #e21a1a;
       opacity: 0.3;
+      transition: transform 0.1s ease-in-out;
     }
 
     strong {
@@ -79,16 +124,16 @@
         top: calc(50% - #{rem(30)});
         left: calc(50% - #{rem(30)});
         z-index: -1;
-        transition: all 0.2s ease-in-out 0.1s;
+        transition: 0.2s ease-in-out;
       }
 
       &:hover {
         &::before {
-          width: 120%;
-          height: rem(30);
+          width: 80%;
+          left: 10%;
+          height: 70%;
+          top: 50%;
           border-radius: 0;
-          top: calc(50% - #{rem(15)});
-          left: -10%;
         }
       }
     }
