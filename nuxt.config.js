@@ -38,7 +38,7 @@ export default {
       {
         rel: 'stylesheet',
         href:
-          'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500&display=swap',
+          'https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap',
       },
     ],
   },
@@ -50,7 +50,7 @@ export default {
    ** Plugins to load before mounting the App
    ** https://nuxtjs.org/guide/plugins
    */
-  plugins: [],
+  plugins: ['@/plugins/fontAwesome'],
   /*
    ** Auto import components
    ** See https://nuxtjs.org/api/configuration-components
