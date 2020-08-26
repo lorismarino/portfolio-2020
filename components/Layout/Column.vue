@@ -6,6 +6,7 @@
       tablet ? `col--tablet-${tablet}` : '',
       laptop ? `col--laptop-${laptop}` : '',
       desktop ? `col--desktop-${desktop}` : '',
+      laptopStart ? `col--laptop-start-${laptopStart}` : '',
     ]"
   >
     <slot />
@@ -17,7 +18,7 @@ export default {
   props: {
     cols: {
       type: [String, Number],
-      default: 12,
+      default: undefined,
     },
     tablet: {
       type: [String, Number],
@@ -31,6 +32,10 @@ export default {
       type: [String, Number],
       default: undefined,
     },
+    laptopStart: {
+      type: [String, Number],
+      default: undefined,
+    },
   },
 }
 </script>
@@ -40,6 +45,12 @@ export default {
   @for $i from 1 through 12 {
     .col#{$screen}-#{$i} {
       grid-column-end: span #{$i};
+    }
+  }
+
+  @for $j from 2 through 11 {
+    .col#{$screen}-start-#{$j} {
+      grid-column-start: #{$j};
     }
   }
 }

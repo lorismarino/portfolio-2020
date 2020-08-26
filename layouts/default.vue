@@ -7,6 +7,7 @@
 <style lang="scss">
 body {
   font-family: 'Poppins', sans-serif;
+  font-size: rem(14);
   line-height: 1.5;
   color: var(--white);
   background-color: var(--black);

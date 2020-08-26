@@ -3,7 +3,7 @@
     <container fill>
       <grid fill align-content-laptop="center">
         <Column :laptop="4">
-          <typography tag="h3" type="thirdtitle" text="About me" color="grey" />
+          <typography tag="h3" type="thirdtitle" text="About me" color="gray" />
         </Column>
         <Column :laptop="8">
           <div class="hero__text">
@@ -57,18 +57,18 @@ export default {
     onMove(event) {
       if (event.clientX > this.lastPosition.x + 40) {
         this.lastPosition.x = event.clientX
-        this.transform.x -= 1
+        this.transform.x -= 2
       } else if (event.clientX < this.lastPosition.x - 40) {
         this.lastPosition.x = event.clientX
-        this.transform.x += 1
+        this.transform.x += 2
       }
 
       if (event.clientY > this.lastPosition.y + 40) {
         this.lastPosition.y = event.clientY
-        this.transform.y -= 1
+        this.transform.y -= 2
       } else if (event.clientY < this.lastPosition.y - 40) {
         this.lastPosition.y = event.clientY
-        this.transform.y += 1
+        this.transform.y += 2
       }
     },
   },
@@ -86,7 +86,7 @@ export default {
 
     &Triangle {
       position: absolute;
-      bottom: 20%;
+      bottom: 0;
       right: 0;
       width: rem(300);
       height: rem(300);

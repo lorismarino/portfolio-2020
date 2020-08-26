@@ -1,5 +1,5 @@
 <template>
-  <component :is="tag" :class="type" :style="{ color: `var(--${color}` }">{{
+  <component :is="tag" :class="type" :style="{ color: `var(--${color})` }">{{
     text
   }}</component>
 </template>
@@ -28,6 +28,15 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+.title {
+  font-size: rem(52);
+  font-weight: 500;
+}
+
+.subtitle {
+  font-size: rem(36);
+}
+
 .thirdtitle {
   font-size: rem(14);
 }
