@@ -24,5 +24,6 @@ body,
 #__layout,
 .app {
   height: 100%;
+  scroll-behavior: smooth;
 }
 </style>

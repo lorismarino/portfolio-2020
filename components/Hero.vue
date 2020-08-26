@@ -32,7 +32,9 @@
         </Column>
       </grid>
       <div class="hero__discover">
-        <button type="button">Discover my projects</button>
+        <a href="#projects" type="button">
+          Discover my projects
+        </a>
       </div>
     </container>
   </section>
@@ -109,7 +111,7 @@ export default {
     display: flex;
     justify-content: center;
 
-    button {
+    a {
       position: relative;
       z-index: 2;
       font-size: rem(18);

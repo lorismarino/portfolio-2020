@@ -1,5 +1,5 @@
 <template>
-  <div class="projects">
+  <div id="projects" class="projects">
     <container>
       <typography tag="h3" text="My projects" type="title" />
       <div class="projects__projects">
