@@ -1,7 +1,10 @@
 <template>
-  <component :is="tag" :class="type" :style="{ color: `var(--${color})` }">{{
-    text
-  }}</component>
+  <component
+    :is="tag"
+    :class="type"
+    :style="{ color: color ? `var(--${color})` : '' }"
+    >{{ text }}</component
+  >
 </template>
 
 <script>
@@ -31,10 +34,13 @@ export default {
 .title {
   font-size: rem(52);
   font-weight: 500;
+  line-height: 1;
+  text-transform: uppercase;
 }
 
 .subtitle {
-  font-size: rem(36);
+  font-size: rem(30);
+  line-height: 1;
 }
 
 .thirdtitle {
