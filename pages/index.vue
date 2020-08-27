@@ -2,6 +2,7 @@
   <div class="home">
     <hero />
     <projects />
+    <skills />
   </div>
 </template>
 
