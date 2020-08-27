@@ -1,5 +1,5 @@
 <template>
-  <div id="projects" class="projects">
+  <section id="projects" class="projects">
     <container>
       <typography tag="h3" text="My projects" type="title" />
       <div class="projects__projects">
@@ -7,7 +7,7 @@
         <project class="projects__project" />
       </div>
     </container>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

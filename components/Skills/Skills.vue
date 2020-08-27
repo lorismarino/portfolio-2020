@@ -1,5 +1,5 @@
 <template>
-  <div class="skills">
+  <section class="skills">
     <container>
       <typography tag="h3" text="My skills" type="title" />
       <div class="skills__skills">
@@ -7,7 +7,7 @@
         <skill class="skills__skill" />
       </div>
     </container>
-  </div>
+  </section>
 </template>
 
 <style lang="scss" scoped>

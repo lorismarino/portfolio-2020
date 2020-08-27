@@ -3,6 +3,7 @@
     <hero />
     <projects />
     <skills />
+    <internship />
   </div>
 </template>
 
