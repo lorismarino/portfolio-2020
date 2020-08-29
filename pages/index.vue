@@ -2,6 +2,7 @@
   <div class="home">
     <hero />
     <projects />
+    <labs />
     <skills />
     <internship />
   </div>
