@@ -42,10 +42,6 @@ export default {
     transform: translateX(5px);
   }
 
-  72% {
-    transform: translateX(5px);
-  }
-
   to {
     transform: none;
   }
