@@ -1,42 +1,56 @@
 <template>
   <div class="lab">
-    <img
-      src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
-      alt="Pixabay picture"
-    />
+    <img :src="`/labs/${lab.image}`" :alt="lab.title" />
     <div class="lab__content">
       <div>
         <typography
           class="lab__thirdtitle"
           type="thirdtitle"
           color="gray"
-          text="Personnal project"
+          :text="lab.type"
         />
-        <typography class="lab__title" type="subtitle" text="Tennis manager" />
+        <typography class="lab__title" type="subtitle" :text="lab.title" />
         <p class="lab__resume">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Quod eveniet
-          impedit dolorem, aperiam nemo laboriosam dolor eius placeat eum rem
-          adipisci numquam atque ipsa quis, excepturi nam minus consequatur in?
+          {{ lab.resume }}
         </p>
         <div class="lab__links">
-          <Link class="lab__link" text="View demo" link="#" external arrow />
           <Link
+            v-if="lab.demo"
+            class="lab__link"
+            text="View demo"
+            :link="lab.demo"
+            external
+            arrow
+          />
+          <Link
+            v-if="lab.github"
             class="lab__link"
             text="View on github"
-            link="#"
+            link="lab.github"
             external
             arrow
           />
         </div>
       </div>
       <div class="lab__tags">
-        <p class="lab__tag">#VueJs</p>
-        <p class="lab__tag">#NuxtJs</p>
-        <p class="lab__tag">#Scss</p>
+        <p v-for="(tag, index) in lab.tags" :key="index" class="lab__tag">
+          #{{ tag }}
+        </p>
       </div>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    lab: {
+      type: Object,
+      required: true,
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .lab {
