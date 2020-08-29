@@ -3,10 +3,32 @@
     <div class="project__number">01</div>
     <grid>
       <Column laptop="6">
-        <img
-          src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
-          alt="Pixabay picture"
-        />
+        <div class="project__left">
+          <img
+            src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
+            alt="Pixabay picture"
+            @mouseover="isFocus = true"
+            @mouseleave="isFocus = false"
+          />
+          <div
+            class="project__images"
+            :class="{ 'project__images--visible': isFocus }"
+            @mouseover="isFocus = true"
+          >
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
+              alt="Pixabay picture"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
+              alt="Pixabay picture"
+            />
+            <img
+              src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
+              alt="Pixabay picture"
+            />
+          </div>
+        </div>
       </Column>
       <Column laptop="5" laptop-start="8">
         <div class="project__content">
@@ -44,6 +66,16 @@
   </div>
 </template>
 
+<script>
+export default {
+  data() {
+    return {
+      isFocus: false,
+    }
+  },
+}
+</script>
+
 <style lang="scss" scoped>
 .project {
   position: relative;
@@ -56,6 +88,32 @@
     color: var(--white);
     font-weight: 700;
     transform: translateX(-50%) translateY(-50%);
+  }
+
+  &__left {
+    position: relative;
+  }
+
+  &__images {
+    opacity: 0;
+    transition: 0.3s ease-in-out;
+    width: rem(500);
+    position: absolute;
+    z-index: 9;
+    right: 0;
+    top: 50%;
+    transform: translateY(-20%) translateX(20%);
+
+    &--visible {
+      opacity: 1;
+      transform: translateY(-50%) translateX(50%);
+    }
+
+    img {
+      &:not(:first-child) {
+        margin-top: rem(50);
+      }
+    }
   }
 
   img {
