@@ -24,7 +24,7 @@ export default {
           type: 'Personal project',
           title: 'Tennis manager',
           resume:
-            'Tennis manager allows you to calculate points during a tennis game, it allowed me to test my knowledge of sight on the court.',
+            'Tennis manager allows you to calculate points during a tennis game, it allowed me to test my knowledge of vue on the ground.',
           link: 'https://tennis-manager.lorismarino.fr/',
           tags: ['VueJs', 'Scss'],
           mainImage: 'tennis-manager/home.png',
