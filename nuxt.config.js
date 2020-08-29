@@ -66,11 +66,7 @@ export default {
   /*
    ** Nuxt.js modules
    */
-  modules: [
-    // Doc: https://github.com/nuxt/content
-    '@nuxt/content',
-    '@nuxtjs/style-resources',
-  ],
+  modules: ['@nuxtjs/style-resources'],
   /*
    ** styleRessources
    */

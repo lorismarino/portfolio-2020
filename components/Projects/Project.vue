@@ -14,6 +14,7 @@
             class="project__images"
             :class="{ 'project__images--visible': isFocus }"
             @mouseover="isFocus = true"
+            @mouseleave="isFocus = false"
           >
             <img
               src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
@@ -103,8 +104,10 @@ export default {
     right: 0;
     top: 50%;
     transform: translateY(-20%) translateX(20%);
+    pointer-events: none;
 
     &--visible {
+      pointer-events: all;
       opacity: 1;
       transform: translateY(-50%) translateX(50%);
     }
