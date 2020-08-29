@@ -3,12 +3,34 @@
     <container>
       <typography tag="h3" text="My skills" type="title" />
       <div class="skills__skills">
-        <skill class="skills__skill" />
-        <skill class="skills__skill" />
+        <skill
+          v-for="(skill, index) in skills"
+          :key="index"
+          class="skills__skill"
+          :skill="skill"
+        />
       </div>
     </container>
   </section>
 </template>
+
+<script>
+export default {
+  data() {
+    return {
+      skills: [
+        {
+          date: 'June - December 2020',
+          company: 'Akki',
+          job: 'front-end developer (intern)',
+          resume:
+            'I take care of integrating the models and doing front-end development with vuej. I also sometimes work on projects with a backend.',
+        },
+      ],
+    }
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .skills {

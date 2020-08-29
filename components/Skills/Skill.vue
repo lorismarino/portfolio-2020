@@ -1,24 +1,32 @@
 <template>
   <div class="skill">
     <grid>
-      <Column laptop="2">
-        <Typography text="Avril 2020" type="thirdtitle" color="gray" />
+      <Column laptop="3">
+        <Typography :text="skill.date" type="thirdtitle" color="gray" />
       </Column>
       <Column laptop="2">
-        <Typography text="Akki" type="subtitle" />
+        <Typography :text="skill.company" type="subtitle" />
       </Column>
-      <Column laptop="8">
-        <Typography text="front developer" type="thirdtitle" color="primary" />
+      <Column laptop="7">
+        <Typography :text="skill.job" type="thirdtitle" color="primary" />
         <p class="skill__resume">
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Fugit
-          corporis libero voluptas voluptates, sed cupiditate omnis ab iusto
-          error impedit quod ipsum reprehenderit mollitia maxime necessitatibus
-          facere recusandae laboriosam aut.
+          {{ skill.resume }}
         </p>
       </Column>
     </grid>
   </div>
 </template>
+
+<script>
+export default {
+  props: {
+    skill: {
+      type: Object,
+      required: true,
+    },
+  },
+}
+</script>
 
 <style lang="scss" scoped>
 .skill {
