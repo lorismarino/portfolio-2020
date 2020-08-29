@@ -1,12 +1,12 @@
 <template>
   <div class="project">
-    <div class="project__number">01</div>
+    <div class="project__number">{{ number }}</div>
     <grid>
       <Column laptop="6">
         <div class="project__left">
           <img
-            src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
-            alt="Pixabay picture"
+            :src="`/projects/${project.mainImage}`"
+            :alt="project.title"
             @mouseover="isFocus = true"
             @mouseleave="isFocus = false"
           />
@@ -17,16 +17,10 @@
             @mouseleave="isFocus = false"
           >
             <img
-              src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
-              alt="Pixabay picture"
-            />
-            <img
-              src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
-              alt="Pixabay picture"
-            />
-            <img
-              src="https://cdn.pixabay.com/photo/2016/11/29/06/15/plans-1867745_1280.jpg"
-              alt="Pixabay picture"
+              v-for="(image, index) in project.images"
+              :key="index"
+              :src="`/projects/${image}`"
+              :alt="project.title"
             />
           </div>
         </div>
@@ -34,32 +28,31 @@
       <Column laptop="5" laptop-start="8">
         <div class="project__content">
           <div>
-            <typography
-              type="thirdtitle"
-              color="gray"
-              text="Personnal project"
-            />
+            <typography type="thirdtitle" color="gray" :text="project.type" />
             <typography
               class="project__title"
               type="subtitle"
-              text="Tennis manager"
+              :text="project.title"
             />
             <p class="project__resume">
-              Tennis manager permet de mieux gérer vos parties de tennis gràace
-              à un compteur intelligent
+              {{ project.resume }}
             </p>
             <Link
               class="project__link"
               text="View this project"
-              link="#"
+              :link="project.link"
               external
               arrow
             />
           </div>
           <div class="project__tags">
-            <p class="project__tag">#VueJs</p>
-            <p class="project__tag">#NuxtJs</p>
-            <p class="project__tag">#Scss</p>
+            <p
+              v-for="(tag, index) in project.tags"
+              :key="index"
+              class="project__tag"
+            >
+              #{{ tag }}
+            </p>
           </div>
         </div>
       </Column>
@@ -69,6 +62,16 @@
 
 <script>
 export default {
+  props: {
+    project: {
+      type: Object,
+      required: true,
+    },
+    number: {
+      type: String,
+      required: true,
+    },
+  },
   data() {
     return {
       isFocus: false,
@@ -88,6 +91,7 @@ export default {
     font-size: rem(60);
     color: var(--white);
     font-weight: 700;
+    z-index: 9;
     transform: translateX(-50%) translateY(-50%);
   }
 
@@ -146,6 +150,7 @@ export default {
   &__tags {
     display: flex;
     margin-left: -#{rem(20)};
+    margin-top: rem(50);
   }
 
   &__tag {
