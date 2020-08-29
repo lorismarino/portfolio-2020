@@ -32,10 +32,15 @@ export default {
 
 <style lang="scss" scoped>
 .title {
-  font-size: rem(52);
+  font-size: rem(36);
   font-weight: 500;
   line-height: 1;
   text-transform: uppercase;
+  width: rem(300);
+
+  @include laptop {
+    font-size: rem(52);
+  }
 }
 
 .subtitle {

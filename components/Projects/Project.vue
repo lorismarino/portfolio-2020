@@ -2,8 +2,8 @@
   <div class="project">
     <div class="project__number">{{ number }}</div>
     <grid>
-      <Column laptop="6">
-        <div class="project__left">
+      <Column laptop="6" class="project__left">
+        <div>
           <img
             :src="`/projects/${project.mainImage}`"
             :alt="project.title"
@@ -25,7 +25,7 @@
           </div>
         </div>
       </Column>
-      <Column laptop="5" laptop-start="8">
+      <Column :cols="12" laptop="5" laptop-start="8">
         <div class="project__content">
           <div>
             <typography type="thirdtitle" color="gray" :text="project.type" />
@@ -93,10 +93,20 @@ export default {
     font-weight: 700;
     z-index: 9;
     transform: translateX(-50%) translateY(-50%);
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
   }
 
   &__left {
     position: relative;
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
   }
 
   &__images {
@@ -140,11 +150,14 @@ export default {
   }
 
   &__content {
-    height: calc(100% - #{rem(40)});
-    padding-top: rem(20);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @include laptop {
+      height: calc(100% - #{rem(40)});
+      padding-top: rem(20);
+    }
   }
 
   &__tags {

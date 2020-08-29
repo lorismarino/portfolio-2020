@@ -7,6 +7,7 @@
           <Column
             v-for="(lab, index) in labs"
             :key="index"
+            cols="12"
             laptop="4"
             class="labs__lab"
           >
@@ -43,7 +44,11 @@ export default {
   margin-top: rem(100);
 
   &__labs {
-    margin-top: rem(100);
+    margin-top: rem(50);
+
+    @include laptop {
+      margin-top: rem(100);
+    }
   }
 
   &__lab {

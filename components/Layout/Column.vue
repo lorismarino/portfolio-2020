@@ -2,7 +2,7 @@
   <div
     class="col"
     :class="[
-      cols ? `col--${cols}` : '',
+      cols ? `col-${cols}` : '',
       tablet ? `col--tablet-${tablet}` : '',
       laptop ? `col--laptop-${laptop}` : '',
       desktop ? `col--desktop-${desktop}` : '',

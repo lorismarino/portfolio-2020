@@ -3,9 +3,15 @@
     <container fill>
       <grid fill align-content-laptop="center">
         <Column :laptop="4">
-          <typography tag="h3" type="thirdtitle" text="About me" color="gray" />
+          <typography
+            class="hero__title"
+            tag="h3"
+            type="thirdtitle"
+            text="About me"
+            color="gray"
+          />
         </Column>
-        <Column :laptop="8">
+        <Column :cols="12" :laptop="8">
           <div class="hero__text">
             <p>My name is <strong>Loris</strong></p>
             <p>
@@ -81,20 +87,37 @@ export default {
 .hero {
   height: 100%;
 
+  &__title {
+    display: none;
+
+    @include laptop {
+      display: block;
+    }
+  }
+
   &__text {
-    font-size: rem(36);
+    font-size: rem(20);
     font-weight: 300;
     position: relative;
+
+    @include laptop {
+      font-size: rem(36);
+    }
 
     &Triangle {
       position: absolute;
       bottom: 0;
       right: 0;
-      width: rem(300);
-      height: rem(300);
+      width: rem(150);
+      height: rem(150);
       stroke: #e21a1a;
       opacity: 0.3;
       transition: transform 0.1s ease-in-out;
+
+      @include laptop {
+        width: rem(300);
+        height: rem(300);
+      }
     }
 
     strong {

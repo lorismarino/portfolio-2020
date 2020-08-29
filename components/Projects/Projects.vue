@@ -43,12 +43,24 @@ export default {
 <style lang="scss" scoped>
 .projects {
   &__projects {
-    margin-top: rem(100);
+    margin-top: rem(50);
+
+    @include laptop {
+      margin-top: rem(100);
+    }
   }
 
   &__project {
     &:not(:first-child) {
-      margin-top: rem(100);
+      margin-top: rem(50);
+      padding-top: rem(50);
+      border-top: 1px solid rgba(#fff, 0.2);
+
+      @include laptop {
+        padding-top: 0;
+        margin-top: rem(100);
+        border-top: none;
+      }
     }
   }
 }
