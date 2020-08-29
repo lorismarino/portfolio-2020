@@ -26,7 +26,7 @@
             v-if="lab.github"
             class="lab__link"
             text="View on github"
-            link="lab.github"
+            :link="lab.github"
             external
             arrow
           />

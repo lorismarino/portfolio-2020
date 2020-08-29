@@ -2,7 +2,7 @@
   <component
     :is="tag"
     :class="type"
-    :style="{ color: color ? `var(--${color})` : '' }"
+    :style="{ color: color ? `var(--${color})` : null }"
     >{{ text }}</component
   >
 </template>
@@ -39,7 +39,7 @@ export default {
   width: rem(300);
 
   @include laptop {
-    font-size: rem(52);
+    font-size: rem(42);
   }
 }
 

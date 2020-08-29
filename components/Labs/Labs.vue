@@ -29,6 +29,7 @@ export default {
           title: 'Vue markdown',
           resume:
             'In order to discover vue, I tested the functionality by creating a markdown editor.',
+          demo: 'https://vue-markdown.lorismarino.fr',
           github: 'https://github.com/LorisMarino/Vue-markdown',
           tags: ['VueJs', 'markdown', 'Scss'],
           image: 'vue-markdown.png',

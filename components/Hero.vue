@@ -13,7 +13,7 @@
         </Column>
         <Column :cols="12" :laptop="8">
           <div class="hero__text">
-            <p>My name is <strong>Loris</strong></p>
+            <p>My name is <strong>Loris Marino</strong></p>
             <p>
               I'm <strong>front-end developer</strong> from
               <strong>Paris</strong>

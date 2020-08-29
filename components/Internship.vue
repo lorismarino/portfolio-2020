@@ -16,6 +16,7 @@
 <style lang="scss" scoped>
 .internship {
   margin-top: rem(100);
+  margin-bottom: rem(100);
   text-align: center;
 
   p {

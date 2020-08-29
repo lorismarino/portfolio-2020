@@ -11,7 +11,7 @@ body {
   font-size: rem(14);
   line-height: 1.5;
   color: var(--white);
-  background-color: var(--black);
+  background-color: #232d2c;
 
   ::selection {
     color: var(--white);
