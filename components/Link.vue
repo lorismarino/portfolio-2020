@@ -4,6 +4,7 @@
       :is="external ? 'a' : 'nuxt-link'"
       :to="external ? null : link"
       :href="external ? link : null"
+      :target="tab ? 'blank' : null"
     >
       {{ text }}
     </component>
@@ -31,6 +32,10 @@ export default {
     link: {
       type: String,
       required: true,
+    },
+    tab: {
+      type: Boolean,
+      default: false,
     },
   },
 }

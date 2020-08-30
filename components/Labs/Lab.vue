@@ -21,6 +21,7 @@
             :link="lab.demo"
             external
             arrow
+            tab
           />
           <Link
             v-if="lab.github"
@@ -29,6 +30,7 @@
             :link="lab.github"
             external
             arrow
+            tab
           />
         </div>
       </div>
@@ -59,6 +61,8 @@ export default {
   flex-direction: column;
   img {
     width: 100%;
+    height: rem(200);
+    object-fit: cover;
   }
 
   &__thirdtitle {

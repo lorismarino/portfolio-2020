@@ -26,6 +26,14 @@ export default {
       labs: [
         {
           type: 'Personal project',
+          title: 'Components',
+          resume: 'Sets of components for use in projects.',
+          github: 'https://github.com/LorisMarino/components',
+          tags: ['Scss', 'ES6'],
+          image: 'components.png',
+        },
+        {
+          type: 'Personal project',
           title: 'Vue markdown',
           resume:
             'In order to discover vue, I tested the functionality by creating a markdown editor.',
@@ -33,6 +41,14 @@ export default {
           github: 'https://github.com/LorisMarino/Vue-markdown',
           tags: ['VueJs', 'markdown', 'Scss'],
           image: 'vue-markdown.png',
+        },
+        {
+          type: 'School project',
+          title: 'Slots machines',
+          resume: 'I developed a 3d css and js slot machine for 7 days.',
+          demo: 'https://slots-machines.lorismarino.fr/',
+          tags: ['css 3D', 'Scss', 'Js'],
+          image: 'slots-machines.png',
         },
       ],
     }
@@ -46,16 +62,6 @@ export default {
 
   &__labs {
     margin-top: rem(50);
-
-    @include laptop {
-      margin-top: rem(100);
-    }
-  }
-
-  &__lab {
-    &:not(:first-child) {
-      margin-top: rem(100);
-    }
   }
 }
 </style>

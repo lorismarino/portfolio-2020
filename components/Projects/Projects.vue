@@ -34,6 +34,52 @@ export default {
             'tennis-manager/winner.png',
           ],
         },
+        {
+          type: 'School project',
+          title: 'Motion portfolio',
+          resume: 'I realized during 2 days, a motion presenting me.',
+          link: 'https://files.lorismarino.fr/motion-portfolio.mp4',
+          tags: ['motion', 'after-effect'],
+          mainImage: 'motion-portfolio.png',
+        },
+        {
+          type: 'School project',
+          title: 'Pokedex',
+          resume:
+            'The pokedex is based on a pokemon database in order to reference them.',
+          link: 'https://pokedex.lorismarino.fr',
+          tags: ['php', 'slim 3', 'mvc'],
+          mainImage: 'pokedex/home.png',
+          images: [
+            'pokedex/home.png',
+            'pokedex/pokemon.png',
+            'pokedex/search.png',
+          ],
+        },
+        {
+          type: 'School project',
+          title: 'Lameteo',
+          resume:
+            'Lameteo gives you the weather forecast in France because at the api openweathermap.',
+          link: 'https://lameteo.lorismarino.fr',
+          tags: ['php', 'api'],
+          mainImage: 'lameteo/home.png',
+          images: [
+            'lameteo/home.png',
+            'lameteo/search.png',
+            'lameteo/weather.png',
+          ],
+        },
+        {
+          type: 'School project',
+          title: 'Player',
+          resume:
+            'The player allows you to listen to a playlist with various settings and watch the clips.',
+          link: 'https://player.lorismarino.fr',
+          tags: ['js', 'Scss', 'audio', 'video'],
+          mainImage: 'player/home.png',
+          images: ['player/home.png', 'player/audio.png', 'player/video.png'],
+        },
       ],
     }
   },
@@ -42,6 +88,9 @@ export default {
 
 <style lang="scss" scoped>
 .projects {
+  padding: rem(50) 0;
+  background-color: var(--black);
+
   &__projects {
     margin-top: rem(50);
 

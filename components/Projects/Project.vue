@@ -42,6 +42,7 @@
               text="View this project"
               :link="project.link"
               external
+              tab
               arrow
             />
           </div>
