@@ -14,7 +14,7 @@ export default {
    ** See https://nuxtjs.org/api/configuration-head
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: 'Loris Marino - front-end developer',
     meta: [
       {
         charset: 'utf-8',
@@ -26,7 +26,8 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || '',
+        content:
+          'I\'m front-"nd developer, love VueJs and NuxtJs, student in H4 at Hétic.',
       },
     ],
     link: [

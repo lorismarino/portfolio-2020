@@ -2,6 +2,12 @@
   <section class="skills">
     <container>
       <typography tag="h3" text="My skills" type="title" />
+      <a
+        target="blank"
+        href="https://files.lorismarino.fr/cv.pdf"
+        class="skills__cv"
+        >download my cv</a
+      >
       <div class="skills__skills">
         <skill
           v-for="(skill, index) in skills"
@@ -64,6 +70,16 @@ export default {
   margin-top: rem(100);
   padding: rem(50) 0;
   background-color: var(--black);
+
+  &__cv {
+    display: inline-block;
+    margin-top: rem(20);
+    transition: color 0.3s ease-in-out;
+
+    &:hover {
+      color: var(--primary);
+    }
+  }
 
   &__skills {
     margin-top: rem(50);

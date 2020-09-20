@@ -26,11 +26,11 @@ export default {
       labs: [
         {
           type: 'Personal project',
-          title: 'Components',
+          title: 'Lork',
           resume: 'Sets of components for use in projects.',
-          github: 'https://github.com/LorisMarino/components',
+          github: 'https://github.com/LorisMarino/lork',
           tags: ['Scss', 'ES6'],
-          image: 'components.png',
+          image: 'lork.jpg',
         },
         {
           type: 'Personal project',
